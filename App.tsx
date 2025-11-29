@@ -197,8 +197,9 @@ const Navbar: React.FC = () => {
   };
 
   const navLinkClass = (path: string) => `
-    relative text-sm font-medium transition-colors duration-300 py-1
+    relative text-sm font-medium transition-all duration-300 py-1
     ${location.pathname === path ? 'text-brand-600' : 'text-slate-600 hover:text-brand-600'}
+    hover:-translate-y-0.5
     after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-brand-600 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left
     ${location.pathname === path ? 'after:scale-x-100 after:origin-bottom-left' : ''}
   `;
@@ -208,7 +209,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center gap-6 flex-1">
-            <Link to="/" className="flex items-center space-x-2 flex-shrink-0 group">
+            <Link to="/" className="flex items-center space-x-2 flex-shrink-0 group hover:scale-105 transition-transform duration-300">
               <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-brand-700 transition-colors">L</div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-700 to-brand-500 hidden sm:block">LearnSphere</span>
             </Link>
@@ -245,7 +246,7 @@ const Navbar: React.FC = () => {
               </>
             )}
             
-            <Link to="/cart" className="relative group">
+            <Link to="/cart" className="relative group hover:scale-105 transition-transform duration-300">
                <div className="flex items-center space-x-1 text-slate-600 hover:text-brand-600 transition-colors">
                   <ShoppingCart size={20} />
                   <span>Cart</span>
@@ -261,18 +262,18 @@ const Navbar: React.FC = () => {
               <div className="flex items-center space-x-4">
                  <span className="text-sm text-slate-500">Hi, {user.username}</span>
                  {user.role === UserRole.ADMIN && (
-                   <Link to="/admin" className="text-brand-600 hover:text-brand-800 font-medium flex items-center gap-1">
+                   <Link to="/admin" className="text-brand-600 hover:text-brand-800 font-medium flex items-center gap-1 hover:scale-105 transition-transform">
                      <Shield size={16} /> Admin
                    </Link>
                  )}
-                 <button onClick={logout} className="text-slate-500 hover:text-red-500 transition-colors">
+                 <button onClick={logout} className="text-slate-500 hover:text-red-500 transition-all duration-300 hover:scale-110">
                    <LogOut size={20} />
                  </button>
               </div>
             ) : (
               <div className="flex items-center space-x-4">
-                <Link to="/login" className="text-slate-600 hover:text-brand-600 font-medium">Login</Link>
-                <Link to="/register" className="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg text-sm">Register</Link>
+                <Link to="/login" className="text-slate-600 hover:text-brand-600 font-medium hover:-translate-y-0.5 transition-transform duration-300">Login</Link>
+                <Link to="/register" className="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg text-sm hover:-translate-y-0.5">Register</Link>
               </div>
             )}
           </div>
