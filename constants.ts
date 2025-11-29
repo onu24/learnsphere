@@ -7,7 +7,8 @@ export const COURSES: Course[] = [
     price: 49,
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
     description: "Master HTML, CSS, and basic JavaScript to build stunning websites.",
-    trailerUrl: "https://www.youtube.com/embed/zJSY8tbf_ys"
+    trailerUrl: "https://www.youtube.com/embed/zJSY8tbf_ys",
+    instructor: "Sarah Jenkins"
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const COURSES: Course[] = [
     price: 39,
     image: "https://images.unsplash.com/photo-1626785774573-4b799312c95d?auto=format&fit=crop&w=800&q=80",
     description: "Learn color theory, typography, and layout design.",
-    trailerUrl: "https://www.youtube.com/embed/YqQx75OPRa0"
+    trailerUrl: "https://www.youtube.com/embed/YqQx75OPRa0",
+    instructor: "Alex Rivera"
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ export const COURSES: Course[] = [
     price: 59,
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
     description: "Analyze data and build predictive models using Python.",
-    trailerUrl: "https://www.youtube.com/embed/edj555cO1tU"
+    trailerUrl: "https://www.youtube.com/embed/edj555cO1tU",
+    instructor: "Dr. Chen Wei"
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ export const COURSES: Course[] = [
     price: 45,
     image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80",
     description: "SEO, social media strategy, and email marketing essentials.",
-    trailerUrl: "https://www.youtube.com/embed/nU-IIXJLyoA"
+    trailerUrl: "https://www.youtube.com/embed/nU-IIXJLyoA",
+    instructor: "Emily Blunt"
   },
   {
     id: 5,
@@ -39,7 +43,8 @@ export const COURSES: Course[] = [
     price: 69,
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
     description: "Build cross-platform mobile apps with React Native.",
-    trailerUrl: "https://www.youtube.com/embed/qSRrxpdMpVc"
+    trailerUrl: "https://www.youtube.com/embed/qSRrxpdMpVc",
+    instructor: "Mark Zuker"
   },
   {
     id: 6,
@@ -47,7 +52,8 @@ export const COURSES: Course[] = [
     price: 55,
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     description: "Protect systems and networks from digital attacks.",
-    trailerUrl: "https://www.youtube.com/embed/inWWhr5tnEA"
+    trailerUrl: "https://www.youtube.com/embed/inWWhr5tnEA",
+    instructor: "Kevin Mitnick"
   },
   {
     id: 7,
@@ -55,7 +61,8 @@ export const COURSES: Course[] = [
     price: 79,
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     description: "Deploy and manage scalable applications on the cloud.",
-    trailerUrl: "https://www.youtube.com/embed/3hLmDS179YE"
+    trailerUrl: "https://www.youtube.com/embed/3hLmDS179YE",
+    instructor: "Jeff Bezo"
   },
   {
     id: 8,
@@ -63,7 +70,8 @@ export const COURSES: Course[] = [
     price: 89,
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     description: "Lead projects to success with proven management methodologies.",
-    trailerUrl: "https://www.youtube.com/embed/uWPIsaYpYQM"
+    trailerUrl: "https://www.youtube.com/embed/uWPIsaYpYQM",
+    instructor: "Linda Hamilton"
   }
 ];
 

@@ -15,6 +15,7 @@ export interface User {
   passwordHash: string; // Simulated hash
   role: UserRole;
   createdAt: string;
+  wishlist?: number[]; // Array of Course IDs
 }
 
 export interface Course {
@@ -24,6 +25,7 @@ export interface Course {
   image: string;
   description: string;
   trailerUrl?: string;
+  instructor?: string; // New field
 }
 
 export interface CartItem extends Course {
@@ -45,4 +47,13 @@ export interface Transaction {
 export interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
+}
+
+export interface Review {
+  courseId: number;
+  userId: string;
+  userName: string;
+  rating: number;
+  comment: string;
+  date: string;
 }
