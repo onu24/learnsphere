@@ -159,20 +159,22 @@ const StarRating = ({ rating, size = 16, interactive = false, onRate }: { rating
 const SimpleBarChart = ({ data }: { data: { label: string, value: number }[] }) => {
   const maxValue = Math.max(...data.map(d => d.value), 1);
   return (
-    <div className="flex items-end justify-between gap-2 h-48 w-full pb-6 select-none">
+    <div className="flex items-end justify-between gap-3 h-52 w-full pb-8 select-none border-b border-slate-100/50">
       {data.map((item, idx) => (
-        <div key={idx} className="flex flex-col items-center flex-1 h-full justify-end group">
+        <div key={idx} className="flex flex-col items-center flex-1 h-full justify-end group cursor-pointer">
            <div className="relative w-full flex justify-center h-full items-end px-1">
              <div 
-               className="w-full max-w-[40px] bg-brand-200 hover:bg-brand-500 transition-all duration-500 rounded-t-md relative group-hover:shadow-lg"
+               className="w-full max-w-[44px] bg-gradient-to-t from-brand-300 to-brand-600 opacity-90 group-hover:opacity-100 transition-all duration-500 rounded-t-lg relative group-hover:shadow-lg group-hover:shadow-brand-200/50 group-hover:-translate-y-1"
                style={{ height: `${(item.value / maxValue) * 100}%` }}
              >
-               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none shadow-lg">
+               {/* Tooltip */}
+               <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-10 pointer-events-none shadow-xl -translate-y-2 group-hover:translate-y-0">
                  ₹{item.value}
+                 <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-800 rotate-45"></div>
                </div>
              </div>
            </div>
-           <span className="text-[10px] text-slate-400 mt-2 truncate w-full text-center px-1" title={item.label}>
+           <span className="text-[10px] font-semibold text-slate-400 mt-3 truncate w-full text-center px-1 group-hover:text-brand-600 transition-colors" title={item.label}>
              {item.label.length > 8 ? item.label.substring(0, 6) + '..' : item.label}
            </span>
         </div>
